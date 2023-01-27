@@ -1,5 +1,7 @@
 # Twitch Chatters
 
+![Twitch Chatters](https://i.postimg.cc/503SnnX5/Chatters.png)
+
 ## About
 
 Twitch Chatters simply shows a list of Twitch chatters extrated from Twitch TMI API. No authentication is required.
