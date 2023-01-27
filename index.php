@@ -9,6 +9,7 @@ $chatters = [];
 $known_bots = [];
 $total_chatters = 0;
 $total_chatters_last = 0;
+$disable_beep = (!empty($_GET['disable_beep']));
 
 session_start();
 
@@ -63,9 +64,9 @@ $_SESSION['twitch-chatters'] = $chatters;
 		</style>
 	</head>
 	<body>
-		<?php if ($total_chatters > $total_chatters_last): ?>
+		<?php if (!$disable_beep and $total_chatters > $total_chatters_last): ?>
 			<audio autoplay><source src="pop-in.mp3" type="audio/mpeg"></audio>
-		<?php elseif ($total_chatters > $total_chatters_last): ?>
+		<?php elseif (!$disable_beep and $total_chatters > $total_chatters_last): ?>
 			<audio autoplay><source src="pop-out.mp3" type="audio/mpeg"></audio>
 		<?php endif ?>
 		<p style="margin: 0 0 10px 0">
