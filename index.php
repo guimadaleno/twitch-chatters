@@ -7,6 +7,10 @@ $known_bots = [];
 $total_chatters = 0;
 $total_chatters_last = 0;
 
+$refresh_time = (!empty($_GET['refresh_time'])) 
+	? intval(substr($_GET['refresh_time'], 0, 11))
+	: 10;
+
 $bg_color = (!empty($_GET['bg_color'])) 
 	? substr($_GET['bg_color'], 0, 6) 
 	: "2c2e38";
@@ -63,7 +67,7 @@ $_SESSION['twitch-chatters'] = $chatters;
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="refresh" content="10">
+		<meta http-equiv="refresh" content="<?=$refresh_time?>">
 		<title><?=$_GET['channel']?> - Twitch Chatters</title>
 		<style>
 			body 
