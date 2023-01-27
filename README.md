@@ -13,10 +13,10 @@ Host it in your own PHP (7.5+) webserver and use the URL parameter `channel=your
 
 ## URL Parameters
 
-`channel` Twitch Channel Username
-`disable_beep` Disables tiny beeps when people gets in/out
-`bg_color` Changes the app background color to match your OBS template
-`text_color` Changes the app text color to match your OBS template
+- `channel` Twitch Channel Username
+- `disable_beep` Disables tiny beeps when people gets in/out
+- `bg_color` Changes the app background color to match your OBS template
+- `text_color` Changes the app text color to match your OBS template
 
 ## Example
 
