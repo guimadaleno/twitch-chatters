@@ -5,7 +5,7 @@
 ## About
 
 Twitch Chatters simply shows a list of Twitch chatters extrated from Twitch TMI API. No authentication is required.
-It can be easily integrated with OBS as a Browser Dock. It also beeps when someone gets in/out.
+It can be easily integrated with OBS as a Browser Dock via `Docks > Custom Browser Docks` menu. It also beeps when someone gets in/out.
 
 ## Getting started
 
