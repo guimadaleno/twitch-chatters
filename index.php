@@ -10,6 +10,8 @@ $known_bots = [];
 $total_chatters = 0;
 $total_chatters_last = 0;
 $disable_beep = (!empty($_GET['disable_beep']));
+$bg_color = (!empty($_GET['bg_color'])) ? substr($_GET['bg_color'], 0, 6) : "2c2e38";
+$text_color = (!empty($_GET['text'])) ? substr($_GET['text'], 0, 6) : "ffffff";
 
 session_start();
 
@@ -57,7 +59,7 @@ $_SESSION['twitch-chatters'] = $chatters;
 		<meta http-equiv="refresh" content="10">
 		<title><?=$_GET['channel']?> - Twitch Chatters</title>
 		<style>
-			body {background-color: #333; padding: 5px; font-family: Verdana; color: #ccc; font-size: 12px; line-height: 12px;}
+			body {background-color: #<?=$bg_color?>; padding: 5px; font-family: Verdana; color: #<?=$text_color?>; font-size: 12px; line-height: 12px;}
 			a {color: #ccc; text-decoration: none;}
 				a:hover {text-decoration: underline;}
 			.no-select {-webkit-user-select: none; -ms-user-select: none; user-select: none;}
